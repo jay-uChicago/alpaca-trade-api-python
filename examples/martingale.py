@@ -146,7 +146,7 @@ class MartingaleTrader(object):
             elif event_type != 'new':
                 print(f'Unexpected order event type {event_type} received')
 
-        conn.run([f'A.{self.symbol}', 'trade_updates'])
+        conn.run([f'AM.{self.symbol}', 'trade_updates'])
 
     def send_order(self, target_qty):
         # We don't want to have two orders open at once
